@@ -1,0 +1,331 @@
+.publication-header {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.1), transparent 32%),
+    radial-gradient(circle at 85% 10%, rgba(14, 165, 233, 0.08), transparent 28%),
+    var(--background-primary);
+}
+
+.institution-list {
+  color: var(--text-secondary);
+  font-size: 1rem !important;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.corresponding-note {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0.65rem 0 1.25rem;
+}
+
+.publication-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.resource-button[disabled] {
+  cursor: default;
+  opacity: 0.62;
+  min-width: 112px;
+}
+
+.resource-button[disabled]:hover {
+  background: var(--text-primary) !important;
+  box-shadow: var(--shadow-md);
+  transform: none;
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  background: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.teaser-card {
+  padding: 1.5rem;
+}
+
+.teaser-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.teaser-pipeline-static {
+  display: none !important;
+}
+
+.teaser-description {
+  max-width: 850px;
+  margin: 1.5rem auto 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.real-world-pipeline-card {
+  margin-top: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teaser-pipeline-animated {
+    display: none !important;
+  }
+
+  .teaser-pipeline-static {
+    display: block !important;
+  }
+}
+
+.results-section .hero-body,
+.poster-section .hero-body {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.results-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 3.5rem 2.5rem;
+}
+
+.carousel-track {
+  position: relative;
+}
+
+.results-carousel .item {
+  display: none;
+  min-height: 700px;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.results-carousel .item.is-active {
+  display: flex;
+}
+
+.results-carousel .item img {
+  max-height: 590px;
+  object-fit: contain;
+}
+
+.results-carousel .result-contrastive img {
+  width: 58%;
+  align-self: center;
+}
+
+.results-carousel .result-table img {
+  width: 100%;
+}
+
+.results-carousel .subtitle {
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.6;
+}
+
+.carousel-control {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-primary);
+  background: white;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: var(--transition);
+}
+
+.carousel-control:hover {
+  color: white;
+  background: var(--primary-color);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-previous {
+  left: 0.25rem;
+}
+
+.carousel-next {
+  right: 0.25rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  right: 0;
+  bottom: 0.5rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+}
+
+.carousel-dot.is-active {
+  background: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-placeholder {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.07), rgba(14, 165, 233, 0.04)),
+    var(--background-primary);
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.video-placeholder .fa-play-circle {
+  color: var(--primary-color);
+  font-size: 4.5rem;
+}
+
+.video-placeholder p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.bibtex-title {
+  margin-bottom: 0 !important;
+}
+
+.bibtex-title::after {
+  display: none;
+}
+
+.license-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  background: var(--background-primary);
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.license-footer a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-header .hero-body {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .institution-list .author-block {
+    display: block;
+    margin-right: 0;
+  }
+
+  .teaser-card {
+    padding: 0.75rem;
+  }
+
+  .results-carousel .item {
+    min-height: 0;
+    padding: 0.75rem;
+  }
+
+  .results-carousel {
+    padding: 0.5rem 0.25rem 2.25rem;
+  }
+
+  .results-carousel .item img {
+    max-height: none;
+  }
+
+  .carousel-control {
+    top: auto;
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    transform: none;
+  }
+
+  .carousel-control:hover {
+    transform: scale(1.05);
+  }
+
+  .carousel-previous {
+    left: 0.5rem;
+  }
+
+  .carousel-next {
+    right: 0.5rem;
+  }
+
+  .carousel-dots {
+    bottom: 0.8rem;
+  }
+
+  .video-placeholder {
+    min-height: 240px;
+  }
+
+  .bibtex-header {
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  pre {
+    padding: 1rem !important;
+    font-size: 0.75rem !important;
+  }
+}

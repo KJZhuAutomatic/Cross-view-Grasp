@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation">
+  <meta name="description" content="A cross-view fusion framework improves robust 6-DoF grasp pose estimation in corner views through novel self-supervised learning and cylinder integration.">
+  <meta name="keywords" content="6-DoF grasp pose estimation, cross-view fusion, robotic grasping, point cloud, self-supervised contrastive learning, multi-view perception, corner-view robustness, GraspNet-1Billion">
+  <meta name="author" content="Kangjian Zhu, Haobo Jiang, Jianjun Qian, Jin Xie">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Cross-view Grasp">
+  <meta property="og:title" content="A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation">
+  <meta property="og:description" content="A cross-view fusion framework improves robust 6-DoF grasp pose estimation in corner views through novel self-supervised learning and cylinder integration.">
+  <meta property="og:image" content="static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cross-view grasp estimation research preview">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Robotic Grasping">
+  <meta property="article:tag" content="Cross-view Fusion">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation">
+  <meta name="twitter:description" content="A cross-view fusion framework for robust 6-DoF grasp pose estimation in corner views.">
+  <meta name="twitter:image" content="static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Cross-view grasp estimation research preview">
+
+  <meta name="citation_title" content="A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation">
+  <meta name="citation_author" content="Zhu, Kangjian">
+  <meta name="citation_author" content="Jiang, Haobo">
+  <meta name="citation_author" content="Qian, Jianjun">
+  <meta name="citation_author" content="Xie, Jin">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/CVF Conference on Computer Vision and Pattern Recognition">
+
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <title>A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation | CVPR 2026</title>
+
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link rel="apple-touch-icon" href="static/images/favicon.png">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/project.css">
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/project.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation",
+    "description": "A cross-view fusion framework for robust 6-DoF grasp pose estimation in corner views.",
+    "author": [
+      {"@type": "Person", "name": "Kangjian Zhu"},
+      {"@type": "Person", "name": "Haobo Jiang"},
+      {"@type": "Person", "name": "Jianjun Qian"},
+      {"@type": "Person", "name": "Jin Xie"}
+    ],
+    "datePublished": "2026",
+    "publisher": {"@type": "Organization", "name": "CVPR 2026"},
+    "image": "static/images/social_preview.png",
+    "keywords": ["6-DoF grasp pose estimation", "cross-view fusion", "robotic grasping", "point cloud", "self-supervised contrastive learning"],
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation</h1>
+
+              <div class="is-size-5 publication-authors" aria-label="Authors">
+                <span class="author-block">Kangjian Zhu<sup>1</sup>,</span>
+                <span class="author-block">Haobo Jiang<sup>2,*</sup>,</span>
+                <span class="author-block">Jianjun Qian<sup>1</sup>,</span>
+                <span class="author-block">Jin Xie<sup>3,*</sup></span>
+              </div>
+
+              <div class="is-size-5 publication-authors institution-list">
+                <span class="author-block"><sup>1</sup>Nanjing University of Science and Technology</span>
+                <span class="author-block"><sup>2</sup>Nanyang Technological University</span>
+                <span class="author-block"><sup>3</sup>Nanjing University</span>
+              </div>
+
+              <div class="publication-venue">CVPR 2026</div>
+              <p class="corresponding-note"><sup>*</sup> Corresponding authors</p>
+
+              <div class="publication-links" aria-label="Project resources">
+                <button class="button is-normal is-rounded is-dark resource-button" type="button" disabled aria-disabled="true">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </button>
+                <button class="button is-normal is-rounded is-dark resource-button" type="button" disabled aria-disabled="true">
+                  <span class="icon"><i class="fas fa-file-alt"></i></span>
+                  <span>arXiv</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="media-card teaser-card">
+            <img class="teaser-pipeline teaser-pipeline-animated" src="static/images/fig1-pipeline.gif" alt="Animated cross-view robotic grasping pipeline" loading="eager">
+            <img class="teaser-pipeline teaser-pipeline-static" src="static/images/fig1.png" alt="Cross-view robotic grasping pipeline" loading="eager">
+          </div>
+          <h2 class="subtitle has-text-centered teaser-description">
+            Our post-fusion framework incorporates an auxiliary view to improve robust 6-DoF grasp pose estimation in corner views without costly full-scene reconstruction.
+          </h2>
+          <div class="media-card teaser-card real-world-pipeline-card">
+            <img src="static/images/fig7.png" alt="Real-world cross-view robotic grasping pipeline samples" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                In this paper, we propose a cross-view fusion framework that enhances the robustness of 6-DoF grasp pose estimation in corner views. Our framework alleviates occlusion by incorporating an auxiliary view and avoids the time-consuming, task-agnostic multi-view reconstruction through a post-fusion strategy. To enhance cross-view fusion, we propose a self-supervised contrastive learning strategy that leverages cross-view associations to regularize point cloud features. In brief, a cross-view point pair is considered a match if the two points correspond to the same 3D location, and a non-match if they represent distinct grasp directions. The learning strategy significantly enhances the spatial consistency and direction distinctiveness of point features, thereby facilitating cross-view fusion and improving estimation robustness. Furthermore, we propose a cross-view-aligned cylinder integration module to fuse grasp-relevant geometry into a comprehensive representation. Specifically, the module first aligns the cross-view points and features according to their similarity to enhance the robustness against noise. Subsequently, these points are registered into the cylindrical coordinate frame, emphasizing the rotation-symmetric geometry which is important for grasping. Finally, local self-attention and seed cross-attention layers are alternately employed, respectively enabling interactions within single views and across views, which supports fine-grained representation of grasp-relevant geometry. Our framework achieves strong performance on the GraspNet-1Billion benchmark and in real-world applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small results-section" id="results">
+      <div class="hero-body">
+        <div class="container is-widescreen">
+          <h2 class="title is-3 has-text-centered">Method and Results</h2>
+          <div id="results-carousel" class="results-carousel" data-carousel>
+            <button class="carousel-control carousel-previous" type="button" aria-label="Show previous result" data-carousel-previous>
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-track">
+              <article class="item is-active" data-carousel-item>
+                <img src="static/images/fig2.png" alt="Complete cross-view grasp estimation pipeline" loading="lazy">
+                <h3 class="subtitle has-text-centered">
+                  <strong>Cross-view Grasp Estimation Pipeline.</strong> Reference and auxiliary views are encoded and fused within grasp-relevant regions to predict robust 6-DoF grasps.
+                </h3>
+              </article>
+              <article class="item result-contrastive" data-carousel-item hidden>
+                <img src="static/images/fig3.png" alt="Self-supervised contrastive learning for cross-view point features" loading="lazy">
+                <h3 class="subtitle has-text-centered">
+                  <strong>Self-supervised Contrastive Learning.</strong> Cross-view associations improve spatial consistency while distinguishing features with different grasp directions.
+                </h3>
+              </article>
+              <article class="item result-table" data-carousel-item hidden>
+                <img src="static/images/table1.png" alt="Table 1 evaluation results on GraspNet-1Billion RealSense and Kinect test data" loading="lazy">
+                <h3 class="subtitle has-text-centered">
+                  <strong>GraspNet-1Billion Benchmark Results.</strong> Our cross-view framework achieves the best AP across Seen, Similar, and Novel splits on both RealSense and Kinect data.
+                </h3>
+              </article>
+            </div>
+            <button class="carousel-control carousel-next" type="button" aria-label="Show next result" data-carousel-next>
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots" aria-label="Select research result">
+              <button class="carousel-dot is-active" type="button" aria-label="Show result 1" data-carousel-dot="0"></button>
+              <button class="carousel-dot" type="button" aria-label="Show result 2" data-carousel-dot="1"></button>
+              <button class="carousel-dot" type="button" aria-label="Show result 3" data-carousel-dot="2"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small is-light" id="video">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+          <div class="video-container">
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1p85q6EECM&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small poster-section" id="poster">
+      <div class="hero-body">
+        <div class="container is-widescreen">
+          <h2 class="title is-3 has-text-centered">Poster</h2>
+          <img class="poster-image" src="static/images/poster.png" alt="CVPR 2026 poster for the cross-view grasp estimation framework" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-light" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title is-3 bibtex-title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard" type="button">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{zhu2026crossview,
+  title={A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation},
+  author={Zhu, Kangjian and Jiang, Haobo and Qian, Jianjun and Xie, Jin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="license-footer">
+    Academic Project Page Template by Eliahu Horwitz, modified for this project, licensed under
+    <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+  </footer>
+</body>
+</html>
